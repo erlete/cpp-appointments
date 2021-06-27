@@ -193,3 +193,7 @@ void strings() {
     str1[0] = 'S';
     cout << str1;
 }
+
+int main() {
+    return 0;
+}

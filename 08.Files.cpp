@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int files() {
+int main() {
     ofstream writeFile("test_file.txt");
     writeFile << "Added another string line to the test_file.";
     writeFile.close();

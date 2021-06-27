@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void arrays() {
+int main() {
     // Array definition (with size):
     int array[2] = {1, 2};
     cout << array[0] << array[1];
@@ -15,4 +15,5 @@ void arrays() {
     int array2[] = {1, 2, 3, 4};
     // If more elements have to be added to the array, it will have to be completely redefined.
     cout << array2;
+    return 0;
 }

@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void referencesAndPointers() {
+int main() {
     string var = "Variable";
     
     // Reference operator:
@@ -24,4 +24,5 @@ void referencesAndPointers() {
     // &ref = "Modified variable"; does not work.
     *varp = "Modified variable";
     cout << varp << '\n' << *varp << '\n';
+    return 0;
 }

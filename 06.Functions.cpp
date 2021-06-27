@@ -14,7 +14,7 @@ int power(int x, int y);
 
 float power(float x, float y);
 
-int functions() {
+int main() {
     cout << "Function 1 output:\n" << basic(12) << '\n';
     
     cout << "Function 2 output:\n";
@@ -26,7 +26,7 @@ int functions() {
     cout << "Functions 3, 4 output:\n";
     int val1 = 5, val2 = 3;
     cout << power(val1, val2) << '\n';
-    int val3 = 5.5, val4 = 2.1;
+    float val3 = 5.5, val4 = 2.1;
     cout << power(val3, val4) << '\n';
     return 0;
 }

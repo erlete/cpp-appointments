@@ -39,7 +39,7 @@ public:
     };
 };
 
-int classes() {
+int main() {
     cout << "Encapsulation\n";
     Encapsulation obj1;
     obj1.idSetter(12);

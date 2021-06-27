@@ -53,7 +53,7 @@ private:
 
 //-------------------------
 
-int objects() {
+int main() {
     // Instance creation:
     Test object;
     object.id = 87123;

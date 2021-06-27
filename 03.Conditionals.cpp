@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void conditionals() {
+int main() {
     int c1 = 10, c2 = 20;
     
     // Basic conditionals:
@@ -28,4 +28,5 @@ void conditionals() {
         default:
             cout << "c1 value is not 20 nor 30";
     }
+    return 0;
 }
