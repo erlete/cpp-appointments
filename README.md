@@ -6,40 +6,40 @@ Some files containing C++ appointments.
 
 # File index
 
-## Introduction
+## 1. Introduction
 
 A brief summary of the most basic startup in C++.
 
-## Arrays
+## 2. Arrays
 
 Information about array creation and modification.
 
-## Conditionals
+## 3. Conditionals
 
 If-else if-else blocks, ternary conditionals and switches.
 
-## Loops
+## 4. Loops
 
 While, do-while and for loops.
 
-## References and pointers
+## 5. References and pointers
 
 Introduction to pointers and references, as well as their custom operators.
 
-## Functions
+## 6. Functions
 
 Function declaration and definition. Overloading concept.
 
-## Classes (1 & 2)
+## 7. Classes (1 & 2)
 
 * Introduction to classes and their most basic behaviour.
 
 * Explanation of the concepts of encapsulation, inheritance, polymorphism, as well as access specifiers.
 
-## Files
+## 8. Files
 
 Introduction to file input and output.
 
-## Exception
+## 9. Exceptions
 
 Basics about exception handling.
