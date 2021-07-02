@@ -1,41 +1,44 @@
-#include <iostream> // "input-output stream".
-// Header file library: allows the user to work with input and output objects, such as 'cout'.
+// Header file libraries:
+#include <iostream> // Meaning: "input-output stream". Allows users to work with input and output objects.
+#include <string> // Allows proper usage of strings in C++, since they are not a default data type themselves.
 
-#include <string> // "strings".
+// using namespace std;
+// Using 'std::<...>' for naming identifier is preferred.
 
-using namespace std; // Allows usage of names for objects and variables from standard library.
-
-void basics() { // Main function:
-    cout << "Hello world";
-    // 1. If 'using namespace std' was not declared, 'cout' (/see-out/) must've been written as 'std::cout'.
-    // 2. '<<' is an insertion operation.
+int outputPrinting() {
+    std::cout << "Output printing:";
+    std::cout << "\nHello world!" << '\n';
+    // '<<' is an insertion operation.
     
-    cout << "\nAnother string" << endl;
-    // 3. '\n' is preferred over 'endl'.
+    std::cout << "Another string" << std::endl;
+    // '\n' is preferred over 'endl'.
+
+    return 0;
 }
 
-void variablesAndConstants() {
+int variablesAndConstants() {
+    std::cout << "\nVariables and Constants:";
     /* Single variable:
      Declaration:
         <type> <identifier>;
      Definition:
         <type> <identifier> = <value>;
      */
-    int integer;
-    integer = 1;
+    int integer; // Declaration.
+    integer = 1; // Definition.
     
-    float decimal1 = 1.0; // Up to 7 decimal digits.
+    float decimal1 = 1.412312; // Up to 7 decimal digits.
+    double decimal2 = 1.423523413; // Up to 14 decimal digits.
     
-    double decimal2 = 1E4; // Up to 14 decimal digits.
-    
-    char single_character = 'a'; // ''
+    char single_character = 'a'; // Using single quotes: ''.
     // If 'char' is assigned a positive integer value, its ASCII character will be represented.
     
-    string multiple_characters = "aa"; // ""
+    std::string multiple_characters = "aa"; // Using double quotes: "".
     
-    bool boolean = true; // 'true' / 'false'
+    bool boolean = true; // Boolean values: 'true' or 'false'.
     
-    cout << integer << decimal1 << decimal2 << single_character << multiple_characters << boolean;
+    std::cout << "\nInt:\t" << integer << "\nFloat:\t" << decimal1 << "\nDouble:\t" << decimal2;
+    std::cout << "\nChar:\t" << single_character << "\nString\t:" << multiple_characters << "\nBool:\t" << boolean;
     
     /* Multiple variables:
      Declaration:
@@ -43,157 +46,135 @@ void variablesAndConstants() {
      Definition:
         <type 1> <identifier 1> = <value 1>, <type 2> <identifier 2> = <value 2>, ...;
      */
-    int var1, var2, var3;
-    var1 = 1;
-    var2 = 2;
-    var3 = 3;
-    
-    int var4 = 4, var5 = 5, var6 = 6;
-    
-    cout << var1 + var2 + var3 + var4 + var5 + var6;
+    int var1, var2, var3; // Declaration.
+    var1 = 1; // Definitions:
+    var2 = 2; //    ...
+    var3 = 3; //    ...
+
+    int var4 = 4, var5 = 5, var6 = 6; // Definition.
+
+    std::cout << "\n\nVariables summed up:\t" << var1 + var2 + var3 + var4 + var5 + var6;
     
     const int constant = 4;
-    // Constant value reasignment would raise an error, unlike variables.
-    
-    cout << constant;
+    // Constant value reassignment would raise an error, unlike with variables.
+    std::cout << "\nConstant:\t" << constant;
+
+    return 0;
 }
 
-void cinInput(){
-    string inputData;
-    cout << "Please input text: ";
-    cin >> inputData;
-    cout << "\nValue: " << inputData;
+int cinTest(){
+    std::cout << "\n\nCin input test:";
+    std::string inputData;
+    std::cout << "\nInput any text: ";
+    std::cin >> inputData;
+    std::cout << "\nValue: " << inputData;
+
+    return 0;
 }
 
-void getLineInput() {
-    string inputData;
-    cout << "Please input text: ";
-    getline(cin, inputData);
-    cout << "\nValue: " << inputData;
+int getlineTest() {
+    std::cout << "\n\nGetline input test:";
+    std::string inputData;
+    std::cout << "\nInput any text: ";
+    std::getline(std::cin, inputData);
+    std::cout << "\nValue: " << inputData;
+
+    return 0;
 }
 
-void arithmeticOperators() {
+int arithmeticOperators() {
+    std::cout << "\n\nArithmetical Operators:";
     int value1 = 1;
     float value2 = 2.0;
     
-    float addition = value1 + value2;
-    cout << addition;
-    
-    float substraction = value1 - value2;
-    cout << substraction;
-    
-    float product = value1 * value2;
-    cout << product;
-    
-    float quotient = value1 / value2;
-    cout << quotient;
-    
-    float remainder = value1 % 2; // Floats are not supported for this operand.
-    cout << remainder;
-    
-    int increment = ++value1;
-    cout << increment;
-    
-    int decrement = --value1;
-    cout << decrement;
+    std::cout << "\nAddition:\t"  << value1 + value2;
+    std::cout << "\nSubstraction:\t"  << value1 - value2;
+    std::cout << "\nProduct:\t"  << value1 * value2;
+    std::cout << "\nQuotient:\t"  << value1 / value2;
+    std::cout << "\nRemainder:\t"  << value1 % 2; // Floats are not supported for this operand.
+    std::cout << "\nIncrement:\t"  << ++value1;
+    std::cout << "\nDecrement:\t" << --value1;
+
+    return 0;
 }
 
-void assignmentOperators() {
-    // Basic:
+int assignmentOperators() {
+    std::cout << "\n\nAssignment Operators:";
     
-    // Normal assignment:
-    int value1 = 2;
+    int value = 2;
+    std::cout << "\nValue = 2\t" << value;
     
-    // Addition assignment:
-    value1 += 1;
+    value += 1;
+    std::cout << "\nValue += 1\t" << value;
     
-    // Substraction assignment:
-    value1 -= 1;
+    value -= 1;
+    std::cout << "\nValue -= 1\t" << value;
     
-    // Product assignment:
-    value1 *= 2;
+    value *= 2;
+    std::cout << "\nValue *= 2\t" << value;
     
-    // Quotient assignment:
-    value1 /= 2;
+    value /= 2;
+    std::cout << "\nValue /= 2\t" << value;
     
-    // Remainder assignment:
-    value1 %= 1;
-    
-    // Boolean:
-    
-    //
-    value1 &= 1;
-    
-    //
-    value1 |= 1;
-    
-    //
-    value1 ^= 1;
-    
-    //
-    value1 >>= 1;
-    
-    //
-    value1 <<= 1;
+    value %= 1;
+    std::cout << "\nValue %= 1\t" << value;
+
+    return 0;
 }
 
 void comparisonOperators() {
+    std::cout << "\n\nComparison Operators:";
     int value1 = 1, value2 = 2;
     // The value returned by a comparison is always either '1' (true) or '0' (false).
     
-    // Equal to:
-    cout << (value1 == value2);
-    
-    // Different from:
-    cout << (value1 != value2);
-    
-    // Greater than:
-    cout << (value1 > value2);
-    
-    // Lower than:
-    cout << (value1 < value2);
-    
-    // Greater or equal to:
-    cout << (value1 >= value2);
-    
-    // Lower or equal to:
-    cout << (value1 <= value2);
+    std::cout << "\nValue 1: " << value1 << "\tValue 2: " << value2;
+    std::cout << "\nEqual to:\t" << (value1 == value2);
+    std::cout << "\nDifferent from:\t" << (value1 != value2);
+    std::cout << "\nGreater than:\t" << (value1 > value2);
+    std::cout << "\nLower than:\t" << (value1 < value2);
+    std::cout << "\nGreater or equal to:\t" << (value1 >= value2);
+    std::cout << "\nLower or equal to:\t" << (value1 <= value2);
 }
 
 void logicalOperators() {
-    bool t = true, f = false;
+    std::cout << "\n\nLogical Operators:";
     
-    // Not:
-    cout << (!t);
-    
-    // And:
-    cout << (t && f);
-    
-    // Or:
-    cout << (t || f);
+    std::cout << "\nNot true:\t" << (!true);
+    std::cout << "\nTrue and False:\t" << (true && false);
+    std::cout << "\nTrue or False:\t" << (true || false);
 }
 
-void strings() {
-    string str1 = "string 1 ", str2 = "string 2";
+int strings() {
+    std::cout << "\n\nStrings:";
+    std::string str1 = "string 1 ", str2 = "string 2";
     
-    // String concatenation:
-    cout << str1 + str2;
-    // or:
-    cout << str1.append(str2); // The 'append' method is much faster than the '+' operator.
+    std::cout << "\nConcatenation:\t" << str1 + str2; // or...
+    str1.append(str2); // The 'append' method is much faster than the '+' operator.
     
-    // String length:
-    cout << str1.length();
-    // or:
-    cout << str1.size();
+    std::cout << "\nLength:\t" << str1.length(); // or...
+    str1.size();
     
-    // Index access:
-    cout << str1[0];
+    std::cout << "\nElement access:\t" << str1[0];
     
-    // Index replacement:
     str1[0] = 'S';
-    cout << str1;
+    std::cout << "\nElement replacement:\t" << str1;
+
+    return 0;
 }
 
 int main() {
+    outputPrinting();
+    variablesAndConstants();
+
+    cinTest();
+    // getlineTest(); // Executing both of these functions causes problems.
+
+    arithmeticOperators();
+    assignmentOperators();
+    comparisonOperators();
+    logicalOperators();
+
+    strings();
+
     return 0;
 }
